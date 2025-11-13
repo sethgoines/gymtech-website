@@ -1,0 +1,31 @@
+# Example Render service manifest for the Node server (paste into Render's dashboard 'Create a new web service' -> 'Manual deploy' -> Advanced -> 'Render YAML')
+services:
+  - type: web
+    name: gymtech-server
+    env: static
+    region: oregon
+    plan: free
+    buildCommand: npm install --prefix ./server && npm run build --if-present
+    startCommand: node server/index.js
+    repo: https://github.com/<your-org>/<your-repo>
+    branch: main
+    autoDeploy: true
+    envVars:
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: EMAIL_FROM
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: GOOGLE_APPLICATION_CREDENTIALS
+        sync: false
