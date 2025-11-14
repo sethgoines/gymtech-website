@@ -1,0 +1,49 @@
+{
+  "name": "gymtech-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "dev:open": "concurrently \"npm run dev\" \"wait-on http://localhost:5173 && start http://localhost:5173\"",
+  "emulator:start": "npx firebase emulators:start --only auth,firestore --project demo",
+  "seed:emulator": "node scripts/seed-emulator.js",
+  "seed:firestore": "node scripts/seed-firestore.js",
+  "dev:emulator": "concurrently \"npm run emulator:start\" \"npm run dev:open\"",
+  "start:server": "node server/index.js",
+  "start:prod": "npm run build && node server/index.js",
+  "pm2:start": "pm2 start ecosystem.config.js",
+  "pm2:stop": "pm2 stop ecosystem.config.js || true",
+  "pm2:restart": "pm2 restart ecosystem.config.js || pm2 start ecosystem.config.js",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.1",
+    "framer-motion": "^10.12.16",
+    "@stripe/stripe-js": "^1.53.0",
+    "@stripe/react-stripe-js": "^2.1.1",
+    "firebase": "^10.10.0"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "vitest": "^1.0.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/jest-dom": "^6.0.0",
+    "@testing-library/user-event": "^14.0.0",
+    "jsdom": "^22.0.0",
+    "concurrently": "^8.2.0",
+    "wait-on": "^7.0.0"
+    ,
+    "firebase-tools": "^11.27.0",
+    "firebase-admin": "^12.0.0"
+    ,
+    "pm2": "^5.2.0",
+    "supertest": "^6.3.3"
+    ,
+    "sinon": "^15.0.0"
+  }
+}
