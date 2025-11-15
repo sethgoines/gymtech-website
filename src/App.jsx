@@ -5,6 +5,9 @@ import NavBar from './components/NavBar'
 import ReplicaNav from './skins/ReplicaNav'
 import ReplicaHome from './skins/ReplicaHome'
 import ReplicaShop from './skins/ReplicaShop'
+import ReplicaProduct from './skins/ReplicaProduct'
+import ReplicaAbout from './skins/ReplicaAbout'
+import ReplicaContact from './skins/ReplicaContact'
 import Home from './pages/Home'
 import Shop from './pages/Shop'
 import Product from './pages/Product'
@@ -54,6 +57,18 @@ export default function App() {
           <Route
             path="/replica/shop"
             element={<PageWrapper><ReplicaNav /><ReplicaShop /></PageWrapper>}
+          />
+          <Route
+            path="/replica/product/:id"
+            element={<PageWrapper><ReplicaNav /><ReplicaProduct /></PageWrapper>}
+          />
+          <Route
+            path="/replica/about"
+            element={<PageWrapper><ReplicaNav /><ReplicaAbout /></PageWrapper>}
+          />
+          <Route
+            path="/replica/contact"
+            element={<PageWrapper><ReplicaNav /><ReplicaContact /></PageWrapper>}
           />
           <Route
             path="/checkout"
