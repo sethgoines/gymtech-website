@@ -2,6 +2,9 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import NavBar from './components/NavBar'
+import ReplicaNav from './skins/ReplicaNav'
+import ReplicaHome from './skins/ReplicaHome'
+import ReplicaShop from './skins/ReplicaShop'
 import Home from './pages/Home'
 import Shop from './pages/Shop'
 import Product from './pages/Product'
@@ -43,6 +46,14 @@ export default function App() {
           <Route
             path="/orders"
             element={<PageWrapper><Orders /></PageWrapper>}
+          />
+          <Route
+            path="/replica"
+            element={<PageWrapper><ReplicaNav /><ReplicaHome /></PageWrapper>}
+          />
+          <Route
+            path="/replica/shop"
+            element={<PageWrapper><ReplicaNav /><ReplicaShop /></PageWrapper>}
           />
           <Route
             path="/checkout"
