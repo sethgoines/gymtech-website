@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-:root{--accent:#0f766e;--muted:#6b7280}
+:root{
+	--accent:#0f766e;
+	--muted:#6b7280;
+	/* font metrics: adjust these to match the custom template exactly (update if you provide a different font) */
+	--font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	--font-heading: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	--font-body-weight: 400;
+	--font-heading-weight: 700;
+	--heading-letter-spacing: -0.02em;
+	--body-letter-spacing: 0em;
+	--body-line-height: 1.6;
+}
 .replica-vars{--hero-h:44px;--text-md:18px;--card-radius:10px}
 .replica-nav{background:#fff;border-bottom:1px solid #eee}
 .replica-nav-inner{max-width:1200px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
@@ -7,7 +18,7 @@
 .replica-nav nav a{margin-left:18px;color:#111;text-decoration:none;padding:6px 8px;border-radius:6px}
 .replica-hero{background:linear-gradient(90deg,rgba(15,118,110,0.12),rgba(15,118,110,0.04));padding:96px 0;border-radius:6px;margin:28px 0}
 .replica-hero-inner{max-width:980px;margin:0 auto;text-align:center;padding:0 20px}
-.replica-hero h2{font-size:var(--hero-h);margin-bottom:12px;letter-spacing:-0.02em;font-weight:700}
+.replica-hero h2{font-size:var(--hero-h);margin-bottom:12px;letter-spacing:var(--heading-letter-spacing);font-weight:var(--font-heading-weight);font-family:var(--font-heading)}
 .replica-hero p{color:var(--muted);font-size:var(--text-md);margin-bottom:18px;max-width:780px;margin-left:auto;margin-right:auto}
 .btn{background:var(--accent);color:#fff;padding:12px 20px;border-radius:12px;text-decoration:none;display:inline-block;border:none;font-weight:700;box-shadow:0 8px 24px rgba(15,118,110,0.08);transition:transform .15s ease, box-shadow .15s ease}
 .btn:hover{transform:translateY(-3px);box-shadow:0 18px 36px rgba(15,118,110,0.12)}
@@ -15,11 +26,18 @@
 .replica-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
 .replica-card{border:1px solid #f0f0f0;padding:14px;border-radius:var(--card-radius);text-align:center;background:#fff;display:flex;flex-direction:column;justify-content:space-between}
 .replica-card img{width:100%;height:220px;object-fit:cover;border-radius:8px}
-.replica-card h3{font-size:16px;margin:10px 0 6px}
+.replica-card h3{font-size:16px;margin:10px 0 6px;letter-spacing:var(--heading-letter-spacing);font-weight:600;font-family:var(--font-heading)}
 .replica-card .price{font-weight:700;color:#0b6b61;margin-top:8px}
 
 /* general */
-body, .replica-nav, .replica-hero, .replica-shop { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+body, .replica-nav, .replica-hero, .replica-shop {
+	font-family: var(--font-sans);
+	font-weight: var(--font-body-weight);
+	letter-spacing: var(--body-letter-spacing);
+	line-height: var(--body-line-height);
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
 .card{background:#fff;border-radius:8px;padding:12px;border:1px solid #eee;box-shadow:0 6px 18px rgba(12,12,12,0.04)}
 
 /* hero image placeholder */
