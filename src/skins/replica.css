@@ -11,9 +11,9 @@
 	--heading-letter-spacing: -0.03em;
 	--body-letter-spacing: 0em;
 	--body-line-height: 1.6;
-	--base-font-size: 16px;
+	--base-font-size: 17px;
 }
-.replica-vars{--hero-h:54px;--text-md:18px;--card-radius:12px}
+.replica-vars{--hero-h:50px;--text-md:18px;--card-radius:12px}
 .replica-nav{background:#fff;border-bottom:1px solid #eee}
 .replica-nav-inner{max-width:1200px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
 .replica-nav .brand{font-weight:800;color:var(--accent);font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;letter-spacing:0.2px}
@@ -22,7 +22,7 @@
 .replica-hero-inner{max-width:980px;margin:0 auto;text-align:center;padding:0 20px}
 .replica-hero h2{font-size:var(--hero-h);margin-bottom:12px;letter-spacing:var(--heading-letter-spacing);font-weight:var(--font-heading-weight);font-family:var(--font-heading);line-height:1.05}
 .replica-hero p{color:var(--muted);font-size:var(--text-md);margin-bottom:18px;max-width:780px;margin-left:auto;margin-right:auto}
-.btn{background:var(--accent);color:#fff;padding:12px 22px;border-radius:14px;text-decoration:none;display:inline-block;border:none;font-weight:700;box-shadow:0 10px 30px rgba(15,118,110,0.09);transition:transform .15s ease, box-shadow .15s ease, opacity .12s ease}
+.btn{background:var(--accent);color:#fff;padding:12px 22px;border-radius:14px;text-decoration:none;display:inline-block;border:none;font-weight:800;font-size:16px;box-shadow:0 10px 30px rgba(15,118,110,0.09);transition:transform .15s ease, box-shadow .15s ease, opacity .12s ease}
 .btn:hover{transform:translateY(-3px);box-shadow:0 22px 44px rgba(15,118,110,0.12);opacity:.98}
 .replica-shop{max-width:1200px;margin:20px auto;padding:0 20px}
 .replica-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
