@@ -8,11 +8,12 @@
 	--font-body-weight: 400;
 	--font-heading-weight: 700;
 	--heading-letter-spacing: -0.02em;
+	--heading-letter-spacing: -0.03em;
 	--body-letter-spacing: 0em;
 	--body-line-height: 1.6;
 	--base-font-size: 16px;
 }
-.replica-vars{--hero-h:52px;--text-md:18px;--card-radius:12px}
+.replica-vars{--hero-h:54px;--text-md:18px;--card-radius:12px}
 .replica-nav{background:#fff;border-bottom:1px solid #eee}
 .replica-nav-inner{max-width:1200px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
 .replica-nav .brand{font-weight:800;color:var(--accent);font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;letter-spacing:0.2px}
@@ -27,7 +28,7 @@
 .replica-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
 .replica-card{border:1px solid #f0f0f0;padding:14px;border-radius:var(--card-radius);text-align:center;background:#fff;display:flex;flex-direction:column;justify-content:space-between}
 .replica-card img{width:100%;height:260px;object-fit:cover;border-radius:10px}
-.replica-card h3{font-size:17px;margin:10px 0 6px;letter-spacing:var(--heading-letter-spacing);font-weight:600;font-family:var(--font-heading)}
+.replica-card h3{font-size:18px;margin:10px 0 6px;letter-spacing:var(--heading-letter-spacing);font-weight:600;font-family:var(--font-heading)}
 .replica-card .price{font-weight:700;color:#0b6b61;margin-top:8px}
 
 /* general */
